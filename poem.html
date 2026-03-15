@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成诗笺 - 诗之古河</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/poem.css">
+    <!-- 使用固定版本的Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/libs/three.min.js"></script>
+    <script src="js/libs/tween.min.js"></script>
+    <!-- 脚本加载 -->
+    <script src="js/main.js"></script>
+    <script src="js/poemGenerator.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-link">← 返回首页</a>
+        <div class="header-content">
+            <h1>诗笺生成工坊</h1>
+            <p>将静态书法转化为动态三维诗境</p>
+        </div>
+        <div class="header-bg"></div>
+    </header>
+    
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="poem.html" class="active">创作诗笺</a></li>
+            <li><a href="gallery.html">诗书雅集</a></li>
+            <li><a href="#" id="about-link">关于我们</a></li>
+        </ul>
+    </nav>
+    
+    <main class="poem-creator">
+        <div class="creator-container">
+            <div class="workspace">
+                <div id="poem-canvas" class="canvas-container">
+                    <div class="canvas-loading" id="canvas-loading">
+                        <div class="spinner"></div>
+                        <p>加载3D渲染引擎...</p>
+                    </div>
+                    <div class="canvas-placeholder">
+                        <p>选择诗作并点击生成按钮</p>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <div class="controls-content">
+                        <div class="control-section">
+                            <h3>选择作品</h3>
+                            <div class="input-group">
+                                <label for="poem-select">诗歌作品</label>
+                                <select id="poem-select" class="poem-selector">
+                                    <option value="" disabled selected>--请选择--</option>
+                                    <option value="poem1" id="poem1">敦煌月</option>
+                                    <option value="poem2" id="poem2">飞天赋</option>
+                                    <option value="poem3" id="poem3">九色鹿</option>
+                                    <option value="poem4" id="poem4">阳光曲</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="control-section">
+                            <h3>装帧设置</h3>
+                            <div class="input-group">
+                                <label for="style-select">装帧风格</label>
+                                <select id="style-select" class="style-selector">
+                                    <option value="scroll">唐风卷轴</option>
+                                    <option value="silk">绢本册页</option>
+                                    <option value="stele">碑刻拓片</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="frame-color">边框颜色</label>
+                                <input type="color" id="frame-color" value="#d4b36a">
+                            </div>
+                        </div>
+                        
+                        <div class="control-section">
+                            <h3>动画效果</h3>
+                            <div class="input-group">
+                                <label for="animation-speed">旋转速度</label>
+                                <input type="range" id="animation-speed" min="0" max="10" value="3">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label>
+                                    <input type="checkbox" id="particle-effect" checked>
+                                    启用意境粒子
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button id="generate-btn" class="generate-btn">
+                                <span class="btn-icon">🔄</span> 生成诗笺
+                            </button>
+                            <button id="download-btn" class="download-btn">
+                                <span class="btn-icon">💾</span> 下载作品
+                            </button>
+                            <button id="reset-btn" class="reset-btn">
+                                <span class="btn-icon">🗑️</span> 重置
+                            </button>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            
+            <div class="poem-info" id="poem-info-panel">
+                <h3>诗歌赏析</h3>
+                <div class="info-content" id="poem-info-content">
+                    <p>选择诗歌后，赏析内容将显示在这里...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2025 ContinueYN | 技术支持: Three.js WebGL引擎</p>
+    </footer>
+
+    <!-- 关于弹窗 -->
+    <div class="modal" id="about-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>关于诗之古河</h3>
+            <p>本项目是余诺闲的没事瞎捣鼓的，旨在通过Web技术实现传统文化与现代科技的融合创新。</p>
+            <div class="team-info">
+                <h4>团队分工</h4>
+                <ul>
+                    <li><strong>文化策划：</strong>诗歌创作、书法提供、文化指导</li>
+                    <li><strong>技术开发：</strong>三维渲染、动画实现、系统架构</li>
+                    <li><strong>项目管理：</strong>资源协调、进度控制、赛事申报</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

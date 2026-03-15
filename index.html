@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>诗之古河 - 数字雅集</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="js/libs/three.min.js"></script>
+    <script src="js/libs/tween.min.js"></script>
+    <script src="js/three.module.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>昨诗今创</h1>
+            <p>当古诗遇见数字艺术</p>
+        </div>
+        <div class="header-bg"></div>
+    </header>
+    
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="poem.html">创作诗笺</a></li>
+            <li><a href="gallery.html">诗书雅集</a></li>
+            <li><a href="#" id="about-link">关于我们</a></li>
+        </ul>
+    </nav>
+    
+    <main class="main-content">
+        <section class="intro-section">
+            <div class="intro-text">
+                <h2>数字化传承古代诗书艺术</h2>
+                <p>通过先进的三维技术，我们将静态的书法作品转化为动态的数字诗境，让千年诗词文化在数字世界中焕发新生。</p>
+                <a href="poem.html" class="cta-button">开始创作</a>
+            </div>
+            <div class="intro-visual">
+                <div class="visual-placeholder" id="preview-canvas"></div>
+            </div>
+        </section>
+        
+        <section class="feature-section">
+            <div class="feature-card">
+                <div class="feature-icon">🖌️</div>
+                <h3>书法数字化</h3>
+                <p>将传统书法作品转化为三维动态展示，还原笔墨神韵</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📜</div>
+                <h3>智能装帧</h3>
+                <p>自动生成唐风卷轴、绢本册页等传统装帧形式</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌌</div>
+                <h3>意境可视化</h3>
+                <p>根据诗歌内容生成对应的高级元素粒子效果</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2025 ContinueYN | 传承千年文脉，创新数字表达</p>
+    </footer>
+    
+    <!-- 关于弹窗 -->
+    <div class="modal" id="about-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>关于诗之古河</h3>
+            <p>本项目是余诺闲的没事瞎捣鼓的，旨在通过Web技术实现传统文化与现代科技的融合创新。</p>
+            <div class="team-info">
+                <h4>团队分工</h4>
+                <ul>
+                    <li><strong>文化策划：</strong>诗歌创作、书法提供、文化指导</li>
+                    <li><strong>技术开发：</strong>三维渲染、动画实现、系统架构</li>
+                    <li><strong>项目管理：</strong>资源协调、进度控制、赛事申报</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

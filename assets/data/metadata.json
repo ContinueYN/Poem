@@ -1,0 +1,46 @@
+[
+    {
+        "id": "poem1",
+        "title": "敦煌月",
+        "author": "李白",
+        "calligraphy": "../calligraphy/poem1.jpg",
+        "background": "边塞",
+        "style": "卷轴",
+        "date": "2025-03-15",
+        "poemText": "大漠孤烟直，\n长河落日圆。\n敦煌千佛静，\n月色洗尘缘。",
+        "description": "此诗描绘了敦煌边塞的壮丽景色和宁静佛境。"
+    },
+    {
+        "id": "poem2",
+        "title": "飞天赋",
+        "author": "王维",
+        "calligraphy": "../assets/calligraphy/poem2.jpg",
+        "background": "乐舞",
+        "style": "绢本",
+        "date": "2025-04-02",
+        "poemText": "飞天舞袖动，\n仙乐绕梁鸣。\n敦煌壁画里，\n千载有余情。",
+        "description": "描绘敦煌壁画中飞天乐舞的生动场景。"
+    },
+    {
+        "id": "poem3",
+        "title": "九色鹿",
+        "author": "白居易",
+        "calligraphy": "../assets/calligraphy/poem3.jpg",
+        "background": "神话",
+        "style": "卷轴",
+        "date": "2025-04-18",
+        "poemText": "九色神鹿现，\n慈悲渡众生。\n敦煌传说里，\n善念永流传。",
+        "description": "讲述敦煌九色鹿的佛教寓言故事。"
+    },
+    {
+        "id": "poem4",
+        "title": "阳关曲",
+        "author": "王之涣",
+        "calligraphy": "../assets/calligraphy/poem4.jpg",
+        "background": "离别",
+        "style": "绢本",
+        "date": "2025-05-03",
+        "poemText": "阳关三叠唱，\n离别意无穷。\n敦煌古道外，\n黄沙掩旧踪。",
+        "description": "表达敦煌古道上离别的哀愁情感。"
+    }
+]

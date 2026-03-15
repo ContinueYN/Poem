@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>诗书雅集 - 敦煌诗壁</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/libs/tween.min.js"></script>
+    <script src="js/three.module.js"></script>
+    <script src="js/galleryRenderer.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-link">← 返回首页</a>
+        <div class="header-content">
+            <h1>诗书雅集</h1>
+            <p>欣赏敦煌诗壁创作成果</p>
+        </div>
+        <div class="header-bg"></div>
+    </header>
+    
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="poem.html">创作诗笺</a></li>
+            <li><a href="gallery.html" class="active">诗书雅集</a></li>
+            <li><a href="#" id="about-link">关于我们</a></li>
+        </ul>
+    </nav>
+    
+    <main class="gallery-container">
+        <div class="gallery-filters">
+            <div class="filter-group">
+                <label for="filter-author">作者</label>
+                <select id="filter-author">
+                    <option value="all">全部</option>
+                    <option value="li-bai">李白</option>
+                    <option value="wang-wei">王维</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="filter-style">风格</label>
+                <select id="filter-style">
+                    <option value="all">全部</option>
+                    <option value="scroll">卷轴</option>
+                    <option value="silk">绢本</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="filter-theme">主题</label>
+                <select id="filter-theme">
+                    <option value="all">全部</option>
+                    <option value="landscape">山水</option>
+                    <option value="history">历史</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- 作品卡片将通过JS动态生成 -->
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2025 ContinueYN | 已收录 0 幅数字诗笺作品</p>
+    </footer>
+
+
+        <!-- 关于弹窗 -->
+    <div class="modal" id="about-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>关于诗之古河</h3>
+            <p>本项目是余诺闲的没事瞎捣鼓的，旨在通过Web技术实现传统文化与现代科技的融合创新。</p>
+            <div class="team-info">
+                <h4>团队分工</h4>
+                <ul>
+                    <li><strong>文化策划：</strong>诗歌创作、书法提供、文化指导</li>
+                    <li><strong>技术开发：</strong>三维渲染、动画实现、系统架构</li>
+                    <li><strong>项目管理：</strong>资源协调、进度控制、赛事申报</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
